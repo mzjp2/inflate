@@ -1,4 +1,4 @@
-# inflate
+# :money_with_wings: inflate
 
 ![PyPI](https://img.shields.io/pypi/v/inflate.svg?style=flat-square)
 ![License](https://img.shields.io/github/license/mzjp2/inflation.svg?style=flat-square)
