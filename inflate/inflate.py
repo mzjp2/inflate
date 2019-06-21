@@ -5,7 +5,7 @@ import click
 from inflate.main import get_inflation_amount, CURRENCY
 from colorama import Fore, Style
 
-__version__ = "0.1"
+__version__ = "0.1rc1"
 
 
 @click.command()
