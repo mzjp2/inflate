@@ -1,0 +1,806 @@
+{
+    "2018": {
+        "inflation": 2.5
+    },
+    "2017": {
+        "inflation": 2.7
+    },
+    "2016": {
+        "inflation": 0.7
+    },
+    "2015": {
+        "inflation": 0
+    },
+    "2014": {
+        "inflation": 1.5
+    },
+    "2013": {
+        "inflation": 2.6
+    },
+    "2012": {
+        "inflation": 2.83
+    },
+    "2011": {
+        "inflation": 4.48
+    },
+    "2010": {
+        "inflation": 3.29
+    },
+    "2009": {
+        "inflation": 2.10
+    },
+    "2008": {
+        "inflation": 3.60
+    },
+    "2007": {
+        "inflation": 2.30
+    },
+    "2006": {
+        "inflation": 2.30
+    },
+    "2005": {
+        "inflation": 2.10
+    },
+    "2004": {
+        "inflation": 1.30
+    },
+    "2003": {
+        "inflation": 1.40
+    },
+    "2002": {
+        "inflation": 1.30
+    },
+    "2001": {
+        "inflation": 1.20
+    },
+    "2000": {
+        "inflation": 0.80
+    },
+    "1999": {
+        "inflation": 1.30
+    },
+    "1998": {
+        "inflation": 1.60
+    },
+    "1997": {
+        "inflation": 1.80
+    },
+    "1996": {
+        "inflation": 2.50
+    },
+    "1995": {
+        "inflation": 2.60
+    },
+    "1994": {
+        "inflation": 2.00
+    },
+    "1993": {
+        "inflation": 2.50
+    },
+    "1992": {
+        "inflation": 4.30
+    },
+    "1991": {
+        "inflation": 7.50
+    },
+    "1990": {
+        "inflation": 7.00
+    },
+    "1989": {
+        "inflation": 5.20
+    },
+    "1988": {
+        "inflation": 4.90
+    },
+    "1987": {
+        "inflation": 4.20
+    },
+    "1986": {
+        "inflation": 3.40
+    },
+    "1985": {
+        "inflation": 6.10
+    },
+    "1984": {
+        "inflation": 5.00
+    },
+    "1983": {
+        "inflation": 4.60
+    },
+    "1982": {
+        "inflation": 8.60
+    },
+    "1981": {
+        "inflation": 11.90
+    },
+    "1980": {
+        "inflation": 18.00
+    },
+    "1979": {
+        "inflation": 13.40
+    },
+    "1978": {
+        "inflation": 8.30
+    },
+    "1977": {
+        "inflation": 15.80
+    },
+    "1976": {
+        "inflation": 16.50
+    },
+    "1975": {
+        "inflation": 24.20
+    },
+    "1974": {
+        "inflation": 16.00
+    },
+    "1973": {
+        "inflation": 9.20
+    },
+    "1972": {
+        "inflation": 7.10
+    },
+    "1971": {
+        "inflation": 9.40
+    },
+    "1970": {
+        "inflation": 6.40
+    },
+    "1969": {
+        "inflation": 5.40
+    },
+    "1968": {
+        "inflation": 4.70
+    },
+    "1967": {
+        "inflation": 2.50
+    },
+    "1966": {
+        "inflation": 3.90
+    },
+    "1965": {
+        "inflation": 4.80
+    },
+    "1964": {
+        "inflation": 3.30
+    },
+    "1963": {
+        "inflation": 2.00
+    },
+    "1962": {
+        "inflation": 4.30
+    },
+    "1961": {
+        "inflation": 3.40
+    },
+    "1960": {
+        "inflation": 1.00
+    },
+    "1959": {
+        "inflation": 0.60
+    },
+    "1958": {
+        "inflation": 3.00
+    },
+    "1957": {
+        "inflation": 3.70
+    },
+    "1956": {
+        "inflation": 4.90
+    },
+    "1955": {
+        "inflation": 4.50
+    },
+    "1954": {
+        "inflation": 1.80
+    },
+    "1953": {
+        "inflation": 3.10
+    },
+    "1952": {
+        "inflation": 9.20
+    },
+    "1951": {
+        "inflation": 9.10
+    },
+    "1950": {
+        "inflation": 3.10
+    },
+    "1949": {
+        "inflation": 2.80
+    },
+    "1948": {
+        "inflation": 7.70
+    },
+    "1947": {
+        "inflation": 7.00
+    },
+    "1946": {
+        "inflation": 3.10
+    },
+    "1945": {
+        "inflation": 2.80
+    },
+    "1944": {
+        "inflation": 2.70
+    },
+    "1943": {
+        "inflation": 3.40
+    },
+    "1942": {
+        "inflation": 7.10
+    },
+    "1941": {
+        "inflation": 10.80
+    },
+    "1940": {
+        "inflation": 16.80
+    },
+    "1939": {
+        "inflation": 2.80
+    },
+    "1938": {
+        "inflation": 1.60
+    },
+    "1937": {
+        "inflation": 3.40
+    },
+    "1936": {
+        "inflation": 0.70
+    },
+    "1935": {
+        "inflation": 0.70
+    },
+    "1934": {
+        "inflation": 0.00
+    },
+    "1933": {
+        "inflation": -2.10
+    },
+    "1932": {
+        "inflation": -2.60
+    },
+    "1931": {
+        "inflation": -4.30
+    },
+    "1930": {
+        "inflation": -2.80
+    },
+    "1929": {
+        "inflation": -0.90
+    },
+    "1928": {
+        "inflation": -0.30
+    },
+    "1927": {
+        "inflation": -2.40
+    },
+    "1926": {
+        "inflation": -0.80
+    },
+    "1925": {
+        "inflation": 0.30
+    },
+    "1924": {
+        "inflation": -0.70
+    },
+    "1923": {
+        "inflation": -6.00
+    },
+    "1922": {
+        "inflation": -14.00
+    },
+    "1921": {
+        "inflation": -8.60
+    },
+    "1920": {
+        "inflation": 15.40
+    },
+    "1919": {
+        "inflation": 10.10
+    },
+    "1918": {
+        "inflation": 22.00
+    },
+    "1917": {
+        "inflation": 25.20
+    },
+    "1916": {
+        "inflation": 18.10
+    },
+    "1915": {
+        "inflation": 12.50
+    },
+    "1914": {
+        "inflation": -0.30
+    },
+    "1913": {
+        "inflation": -0.40
+    },
+    "1912": {
+        "inflation": 3.00
+    },
+    "1911": {
+        "inflation": 0.10
+    },
+    "1910": {
+        "inflation": 0.90
+    },
+    "1909": {
+        "inflation": 0.50
+    },
+    "1908": {
+        "inflation": 0.50
+    },
+    "1907": {
+        "inflation": 1.20
+    },
+    "1906": {
+        "inflation": 0.00
+    },
+    "1905": {
+        "inflation": 0.40
+    },
+    "1904": {
+        "inflation": -0.20
+    },
+    "1903": {
+        "inflation": 0.40
+    },
+    "1902": {
+        "inflation": 0.00
+    },
+    "1901": {
+        "inflation": 0.50
+    },
+    "1900": {
+        "inflation": 5.10
+    },
+    "1899": {
+        "inflation": 0.70
+    },
+    "1898": {
+        "inflation": 0.30
+    },
+    "1897": {
+        "inflation": 1.50
+    },
+    "1896": {
+        "inflation": -0.30
+    },
+    "1895": {
+        "inflation": -1.00
+    },
+    "1894": {
+        "inflation": -2.00
+    },
+    "1893": {
+        "inflation": -0.70
+    },
+    "1892": {
+        "inflation": 0.40
+    },
+    "1891": {
+        "inflation": 0.70
+    },
+    "1890": {
+        "inflation": 0.20
+    },
+    "1889": {
+        "inflation": 1.40
+    },
+    "1888": {
+        "inflation": 0.70
+    },
+    "1887": {
+        "inflation": -0.50
+    },
+    "1886": {
+        "inflation": -1.60
+    },
+    "1885": {
+        "inflation": -3.00
+    },
+    "1884": {
+        "inflation": -2.70
+    },
+    "1883": {
+        "inflation": -0.50
+    },
+    "1882": {
+        "inflation": 1.00
+    },
+    "1881": {
+        "inflation": -1.10
+    },
+    "1880": {
+        "inflation": 3.00
+    },
+    "1879": {
+        "inflation": -4.40
+    },
+    "1878": {
+        "inflation": -2.20
+    },
+    "1877": {
+        "inflation": -0.70
+    },
+    "1876": {
+        "inflation": -0.30
+    },
+    "1875": {
+        "inflation": -1.90
+    },
+    "1874": {
+        "inflation": -3.30
+    },
+    "1873": {
+        "inflation": 3.10
+    },
+    "1872": {
+        "inflation": 4.70
+    },
+    "1871": {
+        "inflation": 1.40
+    },
+    "1870": {
+        "inflation": 0.00
+    },
+    "1869": {
+        "inflation": -5.00
+    },
+    "1868": {
+        "inflation": -1.70
+    },
+    "1867": {
+        "inflation": 6.10
+    },
+    "1866": {
+        "inflation": 6.50
+    },
+    "1865": {
+        "inflation": 0.90
+    },
+    "1864": {
+        "inflation": -0.90
+    },
+    "1863": {
+        "inflation": -3.60
+    },
+    "1862": {
+        "inflation": -2.60
+    },
+    "1861": {
+        "inflation": 2.70
+    },
+    "1860": {
+        "inflation": 3.70
+    },
+    "1859": {
+        "inflation": -1.80
+    },
+    "1858": {
+        "inflation": -8.40
+    },
+    "1857": {
+        "inflation": -5.60
+    },
+    "1856": {
+        "inflation": 0.00
+    },
+    "1855": {
+        "inflation": 3.30
+    },
+    "1854": {
+        "inflation": 15.10
+    },
+    "1853": {
+        "inflation": 9.30
+    },
+    "1852": {
+        "inflation": 0.00
+    },
+    "1851": {
+        "inflation": -3.00
+    },
+    "1850": {
+        "inflation": -6.40
+    },
+    "1849": {
+        "inflation": -6.30
+    },
+    "1848": {
+        "inflation": -12.10
+    },
+    "1847": {
+        "inflation": 12.00
+    },
+    "1846": {
+        "inflation": 4.00
+    },
+    "1845": {
+        "inflation": 4.90
+    },
+    "1844": {
+        "inflation": -0.10
+    },
+    "1843": {
+        "inflation": -11.30
+    },
+    "1842": {
+        "inflation": -7.60
+    },
+    "1841": {
+        "inflation": -2.30
+    },
+    "1840": {
+        "inflation": 1.80
+    },
+    "1839": {
+        "inflation": 7.30
+    },
+    "1838": {
+        "inflation": 0.70
+    },
+    "1837": {
+        "inflation": 2.50
+    },
+    "1836": {
+        "inflation": 11.00
+    },
+    "1835": {
+        "inflation": 1.70
+    },
+    "1834": {
+        "inflation": -7.80
+    },
+    "1833": {
+        "inflation": -6.10
+    },
+    "1832": {
+        "inflation": -7.40
+    },
+    "1831": {
+        "inflation": 9.90
+    },
+    "1830": {
+        "inflation": -3.60
+    },
+    "1829": {
+        "inflation": -1.00
+    },
+    "1828": {
+        "inflation": -2.90
+    },
+    "1827": {
+        "inflation": -6.50
+    },
+    "1826": {
+        "inflation": -5.50
+    },
+    "1825": {
+        "inflation": 17.40
+    },
+    "1824": {
+        "inflation": 8.60
+    },
+    "1823": {
+        "inflation": 6.80
+    },
+    "1822": {
+        "inflation": -13.50
+    },
+    "1821": {
+        "inflation": -12.00
+    },
+    "1820": {
+        "inflation": -9.30
+    },
+    "1819": {
+        "inflation": -2.50
+    },
+    "1818": {
+        "inflation": 0.30
+    },
+    "1817": {
+        "inflation": 13.50
+    },
+    "1816": {
+        "inflation": -8.40
+    },
+    "1815": {
+        "inflation": -10.70
+    },
+    "1814": {
+        "inflation": -12.70
+    },
+    "1813": {
+        "inflation": 2.50
+    },
+    "1812": {
+        "inflation": 13.20
+    },
+    "1811": {
+        "inflation": -2.90
+    },
+    "1810": {
+        "inflation": 3.20
+    },
+    "1809": {
+        "inflation": 9.70
+    },
+    "1808": {
+        "inflation": 3.40
+    },
+    "1807": {
+        "inflation": -1.90
+    },
+    "1806": {
+        "inflation": -4.40
+    },
+    "1805": {
+        "inflation": 16.20
+    },
+    "1804": {
+        "inflation": 3.20
+    },
+    "1803": {
+        "inflation": -5.90
+    },
+    "1802": {
+        "inflation": -23.00
+    },
+    "1801": {
+        "inflation": 11.70
+    },
+    "1800": {
+        "inflation": 36.50
+    },
+    "1799": {
+        "inflation": 12.30
+    },
+    "1798": {
+        "inflation": -2.20
+    },
+    "1797": {
+        "inflation": -10.00
+    },
+    "1796": {
+        "inflation": 6.40
+    },
+    "1795": {
+        "inflation": 11.60
+    },
+    "1794": {
+        "inflation": 7.70
+    },
+    "1793": {
+        "inflation": 2.80
+    },
+    "1792": {
+        "inflation": 1.50
+    },
+    "1791": {
+        "inflation": -0.10
+    },
+    "1790": {
+        "inflation": 1.80
+    },
+    "1789": {
+        "inflation": -1.30
+    },
+    "1788": {
+        "inflation": 4.00
+    },
+    "1787": {
+        "inflation": -0.60
+    },
+    "1786": {
+        "inflation": 0.00
+    },
+    "1785": {
+        "inflation": -4.00
+    },
+    "1784": {
+        "inflation": 0.60
+    },
+    "1783": {
+        "inflation": 12.00
+    },
+    "1782": {
+        "inflation": 2.10
+    },
+    "1781": {
+        "inflation": 4.10
+    },
+    "1780": {
+        "inflation": -3.40
+    },
+    "1779": {
+        "inflation": -8.50
+    },
+    "1778": {
+        "inflation": 4.00
+    },
+    "1777": {
+        "inflation": -0.40
+    },
+    "1776": {
+        "inflation": -2.20
+    },
+    "1775": {
+        "inflation": -5.60
+    },
+    "1774": {
+        "inflation": 0.90
+    },
+    "1773": {
+        "inflation": -0.30
+    },
+    "1772": {
+        "inflation": 10.70
+    },
+    "1771": {
+        "inflation": 8.50
+    },
+    "1770": {
+        "inflation": -0.40
+    },
+    "1769": {
+        "inflation": -8.20
+    },
+    "1768": {
+        "inflation": -1.10
+    },
+    "1767": {
+        "inflation": 5.80
+    },
+    "1766": {
+        "inflation": 1.20
+    },
+    "1765": {
+        "inflation": 3.50
+    },
+    "1764": {
+        "inflation": 8.90
+    },
+    "1763": {
+        "inflation": 2.70
+    },
+    "1762": {
+        "inflation": 3.90
+    },
+    "1761": {
+        "inflation": -4.50
+    },
+    "1760": {
+        "inflation": -4.50
+    },
+    "1759": {
+        "inflation": -7.90
+    },
+    "1758": {
+        "inflation": -0.30
+    },
+    "1757": {
+        "inflation": 21.80
+    },
+    "1756": {
+        "inflation": 4.20
+    },
+    "1755": {
+        "inflation": -6.00
+    },
+    "1754": {
+        "inflation": 5.10
+    },
+    "1753": {
+        "inflation": -2.70
+    },
+    "1752": {
+        "inflation": 4.70
+    },
+    "1751": {
+        "inflation": -2.70
+    }
+}
