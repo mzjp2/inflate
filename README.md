@@ -3,6 +3,7 @@
 ![PyPI](https://img.shields.io/pypi/v/inflate.svg?style=flat-square)
 ![License](https://img.shields.io/github/license/mzjp2/inflation.svg?style=flat-square)
 [![Code Style: Black](https://img.shields.io/badge/code-black-black.svg?style=flat-square)](https://github.com/ambv/black)
+[![Downloads](https://pepy.tech/badge/inflate)](https://pepy.tech/project/inflate?style=flat)
 
 inflate is a Python built command line interface that lets you quickly compute how inflation affects a sum of money in an intuitive and visually pleasing package.
 
