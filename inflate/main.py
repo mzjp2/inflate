@@ -46,7 +46,7 @@ def get_country_json(country: str):
 
 
 def get_inflation_amount(
-    country: str, start_year: str, end_year: str, amount: int, inclusive: bool
+    country: str, start_year: int, end_year: int, amount: int, inclusive: bool
 ):
     """Computes how much amount in start_year is worth in end_year
 
@@ -79,3 +79,17 @@ def get_inflation_amount(
             inflated_amount *= data[counter]["inflation"] / 100 + 1
 
     return round(inflated_amount, 2)
+
+
+def get_average_inflation(
+    country: str, start_year: int, end_year: int, inclusive: bool
+):
+    inflated_amount = get_inflation_amount(country, start_year, end_year, 1, inclusive)
+    percentage = (inflated_amount - 1) * 100
+    average = (
+        percentage / abs(end_year - start_year + 1)
+        if inclusive
+        else percentage / abs(end_year - start_year)
+    )
+    return round(average, 2)
+

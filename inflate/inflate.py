@@ -2,10 +2,10 @@
 
 import click
 
-from inflate.main import get_inflation_amount, CURRENCY
+from inflate.main import get_inflation_amount, CURRENCY, get_average_inflation
 from colorama import Fore, Style
 
-__version__ = "0.1rc1"
+__version__ = "0.1rc2"
 
 
 @click.command()
@@ -19,16 +19,24 @@ __version__ = "0.1rc1"
     is_flag=True,
     default=False,
 )
+@click.option(
+    "--average",
+    "-a",
+    help="Show average annualised inflation, default no",
+    is_flag=True,
+    default=False,
+)
 @click.argument("start", type=click.INT)
 @click.argument("end", type=click.INT)
 @click.argument("amount", default=1.0)
 @click.version_option(__version__)
 def main(
     country: str = "UK",
-    start: str = "",
-    end: str = "",
+    start: int = 0,
+    end: int = 0,
     amount: int = 1,
-    inclusive: bool = True,
+    inclusive: bool = False,
+    average: bool = False,
 ):
     inflated_amount = get_inflation_amount(country, start, end, amount, inclusive)
     inclusive_text = "inclusive" if inclusive else "exclusive"
@@ -51,6 +59,17 @@ def main(
         Style.RESET_ALL,
         inclusive_text,
     )
+
+    if average:
+        formatted_string += (
+            " "
+            + "The average inflation across this period was {}{}{}".format(
+                Fore.BLUE,
+                get_average_inflation(country, start, end, inclusive),
+                Style.RESET_ALL,
+            )
+        )
+
     print(formatted_string)
 
 
