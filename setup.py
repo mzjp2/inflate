@@ -24,7 +24,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Zain Patel",
     author_email="zain.patel06@gmail.com",
-    url="https://github.com/mzjp2/inflation",
+    url="https://github.com/mzjp2/inflate",
     classifiers=[
         # Pick your license as you wish
         "Programming Language :: Python :: 3",
