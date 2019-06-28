@@ -1,6 +1,8 @@
 import pytest
 
-from inflate.main import read_json_file, get_country_json, get_inflation_amount
+from inflate.inflate import _read_json_file, Inflate
+
+read_json_file = _read_json_file
 
 UK_FILEPATH = "./inflate/data/uk_inflation.json"
 US_FILEPATH = "./inflate/data/us_inflation.json"
@@ -26,11 +28,3 @@ def test_main_read_json_file_error():
     nonsense_filepath = "inflation/data/nonsense.json"
     with pytest.raises(FileNotFoundError, match="does not exist"):
         read_json_file(nonsense_filepath)
-
-
-def test_main_get_country_json_uk():
-    assert get_country_json("uk") == read_json_file(UK_FILEPATH)
-
-
-def test_main_get_country_json_us():
-    assert get_country_json("us") == read_json_file(US_FILEPATH)

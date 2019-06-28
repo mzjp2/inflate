@@ -17,7 +17,7 @@ setup(
     name="inflate",
     packages=["inflate"],
     package_data={"inflate": ["data/*.json"]},
-    entry_points={"console_scripts": ["inflate = inflate.inflate:main"]},
+    entry_points={"console_scripts": ["inflate = inflate.cli:main"]},
     version=version,
     description="inflate lets you compute how much money is worth in different years",
     long_description=long_descr,
@@ -34,5 +34,6 @@ setup(
     keywords="money command line interface inflation cli",
     python_requires=">=3.5",
     install_requires=["click", "colorama"],
+    zip_safe=False,
 )
 
