@@ -22,6 +22,7 @@ The options are
 ```
   -c, --country TEXT  Country [either US/UK], default is UK
   -i, --inclusive     Include ending year, default no
+  -a, --average       Show average annualised inflation, default no
   --version           Show the version and exit.
   --help              Show this message and exit.
 ```
@@ -31,14 +32,16 @@ The options are
 ```shell
 >>> inflate -c US -i 1998 1999 50
     $50.0 in 1998 is worth $51.51 in 1999 (inclusive).
+>>> inflate -a 1998 2000 50
+		£50.0 in 1998 is worth £51.46 in 2000 (exclusive). The average inflation across this period was 1.46%.
 ```
 
 ## Current features
 
-- Able to work "backwards", that is, if you want to know how much $10 in 2018 was worth in 2000, you can do so via ``inflate -c US 2018 2000 10``
+- [x] Able to work "backwards", that is, if you want to know how much $10 in 2018 was worth in 2000, you can do so via ``inflate -c US 2018 2000 10``
+- [x] Package and publish on PyPI.
 
 ## Future features/work
 
 - [ ] Add in a more detailed analytics view, showing average inflation across time period.
 - [ ] Flesh out the testing modules
-- [ ] Package and publish on PyPI.
