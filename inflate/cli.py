@@ -64,7 +64,7 @@ def main(
     if average:
         formatted_string += (
             " "
-            + "The average inflation across this period was {}{}%{}".format(
+            + "The average inflation across this period was {}{}%{}.".format(
                 Fore.BLUE, inflated_object.average_inflation(), Style.RESET_ALL
             )
         )
