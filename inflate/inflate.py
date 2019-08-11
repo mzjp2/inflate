@@ -29,11 +29,11 @@ class Inflate:
         country: str = "UK",
         inclusive: bool = False,
     ):
-        self.start_year = start_year
-        self.end_year = end_year
         self.country = country
         self._data = self._get_data()
         self._inclusive = inclusive
+        self.start_year = start_year
+        self.end_year = end_year
 
     @property
     def start_year(self):  # pylint: disable=missing-docstring
@@ -83,7 +83,7 @@ class Inflate:
                 KeyError: when the end year is not something we have data for
 
         """
-        if end_year > 2018:
+        if end_year > 2019:
             raise ValueError(
                 "We only support ending years of 2018 or lower. You inputted {0}".format(
                     self.end_year
@@ -127,9 +127,9 @@ class Inflate:
             for counter in range(self.start_year, self.end_year, -1):
                 inflated_amount /= self._data[counter]["inflation"] / 100 + 1
         else:
-            if self._inclusive:
-                self.end_year += 1
-            for counter in range(self.start_year, self.end_year):
+            for counter in range(
+                self.start_year, self.end_year + 1 if self._inclusive else self.end_year
+            ):
                 inflated_amount *= self._data[counter]["inflation"] / 100 + 1
 
         if formatted:
@@ -159,7 +159,7 @@ class Inflate:
         """
 
         jsonfile = resource_filename(
-            "inflate", "data/{}_inflation.json".format(self._country)
+            "inflate", "data/{}_inflation.json".format(self.country)
         )
         return _read_json_file(jsonfile)
 
