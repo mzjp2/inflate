@@ -83,7 +83,7 @@ class Inflate:
                 KeyError: when the end year is not something we have data for
 
         """
-        if end_year > 2019:
+        if end_year > 2018:
             raise ValueError(
                 "We only support ending years of 2018 or lower. You inputted {0}".format(
                     self.end_year
