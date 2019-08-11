@@ -9,3 +9,6 @@ format:
 
 lint:
 	pylint -j0 inflate --disable=bad-continuation
+
+test:
+	pytest -v
