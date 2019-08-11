@@ -29,9 +29,9 @@ class Inflate:
         country: str = "UK",
         inclusive: bool = False,
     ):
-        self._start_year = start_year
-        self._end_year = end_year
-        self._country = country
+        self.start_year = start_year
+        self.end_year = end_year
+        self.country = country
         self._data = self._get_data()
         self._inclusive = inclusive
 
@@ -48,7 +48,7 @@ class Inflate:
         return self._country
 
     @start_year.setter
-    def set_start_year(self, start_year: str) -> None:
+    def start_year(self, start_year: str) -> None:
         """Setter method for setting the start_year for which to compute inflation from
 
             Args:
@@ -67,12 +67,12 @@ class Inflate:
             )
         if start_year not in self._data:
             raise KeyError(
-                "{0} not found in our {1} data".format(start_year, self._country)
+                "{0} not found in our {1} data".format(start_year, self.country)
             )
         self._start_year = start_year
 
     @end_year.setter
-    def set_end_year(self, end_year: str) -> None:
+    def end_year(self, end_year: str) -> None:
         """Setter method for setting the end_year for which to compute inflation to
 
             Args:
@@ -91,12 +91,12 @@ class Inflate:
             )
         if end_year not in self._data:
             raise KeyError(
-                "{0} not found in our {1} data".format(end_year, self._country)
+                "{0} not found in our {1} data".format(end_year, self.country)
             )
         self._end_year = end_year
 
     @country.setter
-    def set_country(self, country: str) -> None:
+    def country(self, country: str) -> None:
         """Setter method for setting the country in which to compute inflation from
 
             Args:
@@ -105,7 +105,9 @@ class Inflate:
         """
         country = country.lower().strip()
         if country not in CURRENCY.keys():
-            raise ValueError("We currently only have inflation data for the UK and US")
+            raise ValueError(
+                "We currently only have inflation data for the UK, US and the Eurozone"
+            )
         self._country = country
 
     def inflate(self, amount: float = 1.0, formatted: bool = True) -> float:
@@ -119,7 +121,7 @@ class Inflate:
 
         inflated_amount = amount
 
-        if self._start_year > self.end_year:
+        if self.start_year > self.end_year:
             if self._inclusive:
                 self.end_year -= 1
             for counter in range(self.start_year, self.end_year, -1):
