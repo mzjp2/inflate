@@ -46,3 +46,12 @@ def test_start_year_below_1751_error():
         match="We only support starting years of 1751 or later. You inputted 1750",
     ):
         Inflate(start_year=start_year)
+
+
+def test_end_year_above_2018_error():
+    end_year = 2019
+    with pytest.raises(
+        ValueError,
+        match="We only support ending years of 2018 or earlier. You inputted 2019",
+    ):
+        Inflate(start_year=2017, end_year=end_year)
