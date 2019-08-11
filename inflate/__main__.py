@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
-from .inflate import main
+# pylint: disable=missing-docstring
+from .cli import main
 
 main()

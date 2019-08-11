@@ -1,22 +1,17 @@
 # -*- coding: utf-8 -*-
-
+"""Implement the inflate API"""
 import json
 import os
-from pkg_resources import resource_filename
 
-CURRENCY = {"uk": "£", "us": "$"}
-__version__ = "0.1rc3"
+from pkg_resources import resource_filename
+from typing import Dict
+
+CURRENCY = {"uk": "£", "us": "$", "eur": "€"}
+__version__ = "0.2"
 
 
 class Inflate:
-    def __init__(
-        self,
-        start_year: int,
-        end_year: int = 2018,
-        country: str = "UK",
-        inclusive: bool = False,
-    ):
-        """Implement Inflate class.
+    """Implement Inflate class.
 
             Arguments:
                 start_year: the start year to measure inflation from
@@ -27,6 +22,13 @@ class Inflate:
                 <<<put in methods documentation here>>>
         """
 
+    def __init__(
+        self,
+        start_year: int,
+        end_year: int = 2018,
+        country: str = "UK",
+        inclusive: bool = False,
+    ):
         self._start_year = start_year
         self._end_year = end_year
         self._country = country
@@ -34,52 +36,79 @@ class Inflate:
         self._inclusive = inclusive
 
     @property
-    def start_year(self):
+    def start_year(self):  # pylint: disable=missing-docstring
         return self._start_year
 
     @property
-    def end_year(self):
+    def end_year(self):  # pylint: disable=missing-docstring
         return self._end_year
 
     @property
-    def country(self):
+    def country(self):  # pylint: disable=missing-docstring
         return self._country
 
     @start_year.setter
-    def set_start_year(self, start_year):
+    def set_start_year(self, start_year: str) -> None:
+        """Setter method for setting the start_year for which to compute inflation from
+
+            Args:
+                start_year: the year to start computing inflation from
+
+            Raises:
+                ValueError: When start year falls before 1751
+                KeyError: when the start year is not something we have data for
+
+        """
         if start_year < 1751:
             raise ValueError(
                 "We only support starting years of 1751 or later. You inputted {0}".format(
                     start_year
                 )
             )
-        elif start_year not in self._data:
-            raise KeyError("{0} not found in our data".format(start_year))
-        else:
-            self._start_year = start_year
+        if start_year not in self._data:
+            raise KeyError(
+                "{0} not found in our {1} data".format(start_year, self._country)
+            )
+        self._start_year = start_year
 
     @end_year.setter
-    def set_end_year(self, end_year):
+    def set_end_year(self, end_year: str) -> None:
+        """Setter method for setting the end_year for which to compute inflation to
+
+            Args:
+                end_year: the year up till which to compute inflation till
+
+            Raises:
+                ValueError: When end year exceed 2018
+                KeyError: when the end year is not something we have data for
+
+        """
         if end_year > 2018:
             raise ValueError(
                 "We only support ending years of 2018 or lower. You inputted {0}".format(
                     self.end_year
                 )
             )
-        elif end_year not in self._data:
-            raise KeyError("{0} not found in our data".format(end_year))
-        else:
-            self._end_year = end_year
+        if end_year not in self._data:
+            raise KeyError(
+                "{0} not found in our {1} data".format(end_year, self._country)
+            )
+        self._end_year = end_year
 
     @country.setter
-    def set_country(self, country):
-        country = country.lower().strip()
-        if country not in ("uk", "us"):
-            raise ValueError("We currently only have inflation data for the UK and US")
-        else:
-            self._country = country
+    def set_country(self, country: str) -> None:
+        """Setter method for setting the country in which to compute inflation from
 
-    def inflate(self, amount: float = 1.0, formatted: bool = True):
+            Args:
+                country: The country to compute inflation from
+
+        """
+        country = country.lower().strip()
+        if country not in CURRENCY.keys():
+            raise ValueError("We currently only have inflation data for the UK and US")
+        self._country = country
+
+    def inflate(self, amount: float = 1.0, formatted: bool = True) -> float:
         """Computes how much amount in start_year is worth in end_year
 
         Args:
@@ -103,32 +132,37 @@ class Inflate:
 
         if formatted:
             return round(inflated_amount, 2)
-        else:
-            return inflated_amount
+        return inflated_amount
 
-    def average_inflation(self):
+    def average_inflation(self) -> float:
+        """Computes the average inflation across specified time period
+
+            Returns:
+                average: The average inflation period, rounded to 2 d.p
+        """
         inflated_amount = self.inflate(amount=1, formatted=False)
         percentage = (inflated_amount - 1) * 100
         period = abs(self.end_year - self.start_year)
         average = percentage / (period + 1) if self._inclusive else percentage / period
         return round(average, 2)
 
-    def _get_data(self):
+    def _get_data(self) -> str:
         """Returns data from json file given country
-    
+
         Args:
             country: Country, either [UK/US]
+
         Returns:
             jsonfile: Path to JSON file
         """
 
         jsonfile = resource_filename(
-            "inflate", "data/{}_inflation.json".format(self.country)
+            "inflate", "data/{}_inflation.json".format(self._country)
         )
         return _read_json_file(jsonfile)
 
 
-def _read_json_file(jsonfile: str):
+def _read_json_file(jsonfile: str) -> Dict[int, Dict[str, float]]:
     """Return Python dictionary from json file
 
     Args:
@@ -139,8 +173,8 @@ def _read_json_file(jsonfile: str):
     if not os.path.exists(jsonfile):
         raise FileNotFoundError("{} does not exist".format(jsonfile))
 
-    with open(jsonfile) as f:
-        data = json.load(f)
+    with open(jsonfile) as json_file:
+        data = json.load(json_file)
 
     new_data = {}
 
@@ -150,4 +184,3 @@ def _read_json_file(jsonfile: str):
         new_data[new_key]["inflation"] = float(data[key]["inflation"])
     del data
     return new_data
-

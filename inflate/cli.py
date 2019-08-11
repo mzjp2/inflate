@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-
+""" Implementation of the inflate cli"""
 import click
-
-from inflate.inflate import Inflate, CURRENCY, __version__
 from colorama import Fore, Style
+
+from inflate.inflate import CURRENCY, Inflate, __version__
 
 
 @click.command()
@@ -28,6 +28,7 @@ from colorama import Fore, Style
 @click.argument("end", type=click.INT)
 @click.argument("amount", default=1.0)
 @click.version_option(__version__)
+# pylint: disable=too-many-arguments
 def main(
     country: str = "UK",
     start: int = 0,
@@ -36,6 +37,17 @@ def main(
     inclusive: bool = False,
     average: bool = False,
 ):
+    """The entry hook for the click CLI
+
+        Args:
+            country: The country you want to compute inflation in
+            start: The starting year to compute inflation from
+            end: The ending year to compute inflation to
+            amount: The amount of currency to compute inflation on
+            inclusive: Whether to include the ending year or not in calculations
+            average: Return the average value of inflatiion across the time period
+
+        """
     inflated_object = Inflate(
         start_year=start, end_year=end, country=country, inclusive=inclusive
     )
