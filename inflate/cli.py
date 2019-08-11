@@ -8,7 +8,7 @@ from inflate.inflate import CURRENCY, Inflate, __version__
 
 @click.command()
 @click.option(
-    "--country", "-c", help="Country [either US/UK], default is UK", default="UK"
+    "--country", "-c", help="Country [either US/UK/EUR], default is UK", default="UK"
 )
 @click.option(
     "--inclusive",
@@ -37,17 +37,7 @@ def main(
     inclusive: bool = False,
     average: bool = False,
 ):
-    """The entry hook for the click CLI
-
-        Args:
-            country: The country you want to compute inflation in
-            start: The starting year to compute inflation from
-            end: The ending year to compute inflation to
-            amount: The amount of currency to compute inflation on
-            inclusive: Whether to include the ending year or not in calculations
-            average: Return the average value of inflatiion across the time period
-
-        """
+    # pylint: disable=missing-docstring
     inflated_object = Inflate(
         start_year=start, end_year=end, country=country, inclusive=inclusive
     )
