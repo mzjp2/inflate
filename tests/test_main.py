@@ -55,3 +55,20 @@ def test_end_year_above_2018_error():
         match="We only support ending years of 2018 or earlier. You inputted 2019",
     ):
         Inflate(start_year=2017, end_year=end_year)
+
+
+def test_country_setter():
+    Inflate(start_year=2017, end_year=2018, country="eur")
+    Inflate(start_year=2017, end_year=2018, country="uk")
+    inflate_client = Inflate(start_year=2017, end_year=2018, country="us")
+    with pytest.raises(
+        ValueError,
+        match="We currently only have inflation data for the UK, US and the Eurozone",
+    ):
+        Inflate(start_year=2017, end_year=2018, country="a")
+    with pytest.raises(
+        ValueError,
+        match="We currently only have inflation data for the UK, US and the Eurozone",
+    ):
+        inflate_client.country = "a"
+
