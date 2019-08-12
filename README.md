@@ -40,6 +40,8 @@ The options are
 
 - [x] Able to work "backwards", that is, if you want to know how much $10 in 2018 was worth in 2000, you can do so via ``inflate -c US 2018 2000 10``
 - [x] Package and publish on PyPI.
+- [x] Added average inflation view
+- [x] Added implementation for EUR
 
 ## Future features/work
 
