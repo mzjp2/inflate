@@ -48,7 +48,7 @@ class Inflate:
         return self._country
 
     @start_year.setter
-    def start_year(self, start_year: str) -> None:
+    def start_year(self, start_year: int) -> None:
         """Setter method for setting the start_year for which to compute inflation from
 
             Args:
@@ -72,7 +72,7 @@ class Inflate:
         self._start_year = start_year
 
     @end_year.setter
-    def end_year(self, end_year: str) -> None:
+    def end_year(self, end_year: int) -> None:
         """Setter method for setting the end_year for which to compute inflation to
 
             Args:
@@ -85,8 +85,8 @@ class Inflate:
         """
         if end_year > 2018:
             raise ValueError(
-                "We only support ending years of 2018 or lower. You inputted {0}".format(
-                    self.end_year
+                "We only support ending years of 2018 or earlier. You inputted {0}".format(
+                    end_year
                 )
             )
         if end_year not in self._data:
