@@ -7,7 +7,7 @@ from pkg_resources import resource_filename
 from typing import Dict
 
 CURRENCY = {"uk": "£", "us": "$", "eur": "€"}
-__version__ = "0.2"
+__version__ = "0.4"
 
 
 class Inflate:
