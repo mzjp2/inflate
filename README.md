@@ -33,7 +33,7 @@ The options are
 >>> inflate -c US -i 1998 1999 50
     $50.0 in 1998 is worth $51.51 in 1999 (inclusive).
 >>> inflate -a 1998 2000 50
-		£50.0 in 1998 is worth £51.46 in 2000 (exclusive). The average inflation across this period was 1.46%.
+    £50.0 in 1998 is worth £51.46 in 2000 (exclusive). The average inflation across this period was 1.46%.
 ```
 
 ## Current features
