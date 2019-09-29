@@ -58,8 +58,8 @@ def test_end_year_above_2018_error():
 
 
 def test_country_setter():
-    Inflate(start_year=2017, end_year=2018, country="eur")
-    Inflate(start_year=2017, end_year=2018, country="uk")
+    assert Inflate(start_year=2017, end_year=2018, country="eur").country == "eur"
+    assert Inflate(start_year=2017, end_year=2018, country="uk").country == "uk"
     inflate_client = Inflate(start_year=2017, end_year=2018, country="us")
     with pytest.raises(
         ValueError,
